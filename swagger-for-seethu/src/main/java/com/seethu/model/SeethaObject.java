@@ -1,10 +1,15 @@
 package com.seethu.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class SeethaObject {
 	
+	@JsonProperty("name")
 	private String name;
+	@JsonProperty("employer")
 	private String employer;
-	private long salary;
+	@JsonProperty("salary")
+	private Long salary;
 	
 	public String getName() {
 		return name;
@@ -15,13 +20,20 @@ public class SeethaObject {
 	public String getEmployer() {
 		return employer;
 	}
+	
+	public SeethaObject(String name, String employer, Long salary) {
+		super();
+		this.name = name;
+		this.employer = employer;
+		this.salary = salary;
+	}
 	public void setEmployer(String employer) {
 		this.employer = employer;
 	}
-	public long getSalary() {
+	public Long getSalary() {
 		return salary;
 	}
-	public void setSalary(long salary) {
+	public void setSalary(Long salary) {
 		this.salary = salary;
 	}
 	
